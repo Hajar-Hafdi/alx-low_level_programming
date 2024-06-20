@@ -1,8 +1,11 @@
 #include <stdio.h>
-/*
- * main: entry point
- * this function prints a sentence
- * return: always 0 (success)
+
+/**
+ * main - Entry point
+ *
+ * Description: A C program prints with printf function.
+ *
+ * Return: Always 0 (success)
  */
 int main(void)
 {
