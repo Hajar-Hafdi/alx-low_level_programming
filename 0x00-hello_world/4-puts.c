@@ -1,15 +1,14 @@
-#include<stdio.h>
+#include <stdio.h>
+
 /**
-* main: Entry Point of the program
+* main -Entry point
 *
-* @char This function main purpose is to print a message
+* Description: A C program that prints with puts function
 *
-* return: always 0 (success)
-**/
+* Return: Always 0 (success)
+*/
 int main(void)
 {
-	char sentence[] = "\"Programming is like building a multilingual puzzle";
-
-	puts(sentence);
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
