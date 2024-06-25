@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_alphabet - helper function that prints alphabets in lowercase.
+ * main - Entry point
  *
- * using print_alphabet and putchar to print lower case alphabets.
+ * Description: prints _putchar using putchar prototype.
  *
- * Return: void
+ * Return: Always 0 (Success)
  */
-void print_alphabet(void)
+int main(void)
 {
 	char i;
 
