@@ -2,12 +2,9 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * print_alphabet - helper function that prints alphabets in lowercase.
  *
- * print_alphabet: helper function that prints alphabets in lowercase.
- *
- * Description: using print_alphabet and putchar
- *              to print lower case alphabets.
+ * using print_alphabet and putchar to print lower case alphabets.
  *
  * Return: void
  */
