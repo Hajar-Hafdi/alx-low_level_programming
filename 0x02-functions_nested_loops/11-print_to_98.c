@@ -11,11 +11,27 @@ void print_to_98(int n)
 	int counting;
 
 	if (n > 98)
-		for (counting = n; counting > 98; counting--)
-			printf("%d, ", counting);
-	else
-		for (counting = n; counting < 98; counting++)
-			printf("%d,  ", counting);
-	printf("98\n");
+	{
+		for (counting = n; counting >= 98; counting--)
+		{
+			printf("%d", counting);
+			if (counting > 98)
+			{
+				printf(", ");
+			}
+		}
+		else
+		{
+			for (counting = n; counting <= 98; counting++)
+			{
+				printf("%d", counting);
+				if (counting < 98)
+				{
+					printf(", ");
+				}
+			}
+		}
+	}
+	printf("\n");
 }
 
