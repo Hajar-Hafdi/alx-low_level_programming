@@ -20,7 +20,8 @@ void print_to_98(int n)
 				printf(", ");
 			}
 		}
-		else
+	}
+	else
 		{
 			for (counting = n; counting <= 98; counting++)
 			{
@@ -31,7 +32,5 @@ void print_to_98(int n)
 				}
 			}
 		}
-	}
 	printf("\n");
 }
-
