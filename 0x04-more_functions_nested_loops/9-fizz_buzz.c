@@ -26,7 +26,7 @@ int main(void)
 		if (number != 100)
 			printf(" ");
 		else
-			_printf("\n");
+			printf("\n");
 	}
 	return (0);
 }
