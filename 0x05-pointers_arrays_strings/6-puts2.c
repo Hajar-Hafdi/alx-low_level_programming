@@ -16,5 +16,5 @@ void puts2(char *str)
 		if (k % 2 == 0)
 			putchar(str[k]);
 	}
-	_putchar('\n');
+	putchar('\n');
 }
