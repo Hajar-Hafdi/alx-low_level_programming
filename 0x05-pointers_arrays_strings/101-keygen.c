@@ -12,12 +12,12 @@ int main(void)
 	int M;
 	char d;
 
-	strand(time(NULL));
-	while (sum <= 2645)
+	srand(time(NULL));
+	while (M <= 2645)
 	{
 		d = rand() % 120;
 		M += d;
-		putchar(c);
+		putchar(d);
 	}
 	putchar(2772 - M);
 	return (0);
