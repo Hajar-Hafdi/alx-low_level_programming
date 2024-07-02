@@ -9,13 +9,15 @@
  */
 int main(void)
 {
-	int M;
+	int M = 0;
 	char d;
 
 	srand(time(NULL));
 	while (M <= 2645)
 	{
-		d = rand() % 120;
+		d = rand() % 94 + 33;
+		if (M + d > 2772)
+			continue;
 		M += d;
 		putchar(d);
 	}
