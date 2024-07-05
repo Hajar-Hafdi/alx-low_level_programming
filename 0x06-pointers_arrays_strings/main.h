@@ -12,5 +12,5 @@ char *string_toupper(char *str);
 char *cap_string(char *s);
 int isDelimiter(char c);
 int isLow(char c);
-char *leet(char *);
+char *leet(char *c);
 #endif
