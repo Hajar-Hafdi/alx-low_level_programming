@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * *create_array - creates ana array of chars
@@ -16,5 +17,5 @@ char *create_array(unsigned int size, char c)
 		return (0);
 	while (size--)
 		d[size] = c;
-	return (n);
+	return (d);
 }
