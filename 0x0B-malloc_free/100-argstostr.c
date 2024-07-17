@@ -33,7 +33,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (; u < ac; u++, ncc++)
 		ncc += _strlenn(av[u]);
-	| n = malloc(sizeof(char) * ncc + 1);
+	n = malloc(sizeof(char) * ncc + 1);
 	if (n == 0)
 		return (NULL);
 	for (u = 0; u < ac; u++)
