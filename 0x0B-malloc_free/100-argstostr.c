@@ -29,20 +29,20 @@ char *argstostr(int ac, char **av)
 	int u = 0, ncc = 0, j = 0, cpt = 0;
 	char *n;
 
-	if (a == 0 || av == NULL)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (; u < ac; u++, ncc++)
-		ncc += _strlen(av[u]);
-	| s = malloc(sizeof(char) * ncc + 1);
-	if (s == 0)
+		ncc += _strlenn(av[u]);
+	| n = malloc(sizeof(char) * ncc + 1);
+	if (n == 0)
 		return (NULL);
 	for (u = 0; u < ac; u++)
 	{
 		for (j = 0; av[u][j] != '\0'; j++, cpt++)
-			s[cpt] = av[u][j];
-		s[cpt] = '\n';
+			n[cpt] = av[u][j];
+		n[cpt] = '\n';
 		cpt++;
 	}
-	s[cpt] = '\0';
-	return (s);
+	n[cpt] = '\0';
+	return (n);
 }
