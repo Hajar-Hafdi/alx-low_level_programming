@@ -3,14 +3,16 @@
 /**
  * main - prints all arguments it receives
  *
- * @argc: int
- * @argv: list
+ * @argc: arg count
+ * @argv: arg vector
  *
  * Return: 0 (Success)
  */
 int main(int argc, char const *argv[])
 {
-	for (int u = 0; u < argc; u++)
+	int u;
+
+	for (u = 0; u < argc; u++)
 	{
 		printf("%s\n", argv[u]);
 	}
