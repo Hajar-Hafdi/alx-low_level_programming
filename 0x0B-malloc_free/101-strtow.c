@@ -52,25 +52,28 @@ char **strtow(char *str)
 	{
 		if (str[u] != ' ' && (u == 0 || str[u - 1] == ' '))
 		{
-			for (j = 1; str[u + j] != ' ' && str[u + j];
-					;
-					j++
-					v[wc] = (char *)malloc(j * sizeof(char));
-					j--;
-					if (v[wcc] = NULL)
-					for (k = 0; k < wcc; k++)
-					free(v[k]);
-					free(v[n - 1]);
-					free(v);
-					return (NULL);
-					for (l = 0; l < j; l++)
-					v[wcc][l] = str[u + l];
-					v[wcc][l] = '\0';
-					wcc++;
-					u += j;
-					}
-					else
-					u++;
+		j = 0;
+		while (str[u + j] != ' ' && str[u + j] != '\0')
+			j++;
+		v[wcc] = (char *)malloc((j + 1) * sizeof(char));
+		if (v[wcc] == NULL)
+		{
+			for (k = 0; k < wcc; k++)
+				free(v[k]);
+			free(v);
+			return (NULL);
+		}
+		for (l = 0; l < j; l++)
+			v[wcc][l] = str[u + 1];
+		v[wcc][j] = '\0';
+		wcc++;
+		u += j;
+		}
+		else
+		{
+			u++;
+		}
 	}
+	v[wcc] = NULL;
 	return (v);
 }
