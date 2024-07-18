@@ -20,10 +20,11 @@ int wordcnt(char *s)
 			if (s[u + 1] != ' ' && s[u + 1] != '\0')
 				m++;
 		}
-		else if (u == 0)
+		else if (u == 0 || s[u - 1] == ' ')
+		{
 			m++;
+		}
 	}
-	m++;
 	return (m);
 }
 /**
@@ -35,18 +36,17 @@ int wordcnt(char *s)
  */
 char **strtow(char *str)
 {
-	int i, j, k, l, n = 0, wcc = 0;
+	int u, j, k, l, n = 0, wcc = 0;
 	char **v;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
 	n = wordcnt(str);
-	if (n == 1)
+	if (n == 0)
 		return (NULL);
-	v = (char **)malloc(n * sizeof(char *));
+	v = (char **)malloc((n + 1) * sizeof(char *));
 	if (v == NULL)
 		return (NULL);
-	v[n - 1] = NULL;
 	u = 0;
 	while (str[u])
 	{
