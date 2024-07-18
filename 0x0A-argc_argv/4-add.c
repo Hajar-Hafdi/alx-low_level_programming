@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
 	while (--argc)
 	{
-		for (c = argv[argc]; *cc; cc++)
+		for (cc = argv[argc]; *cc; cc++)
 			if (*cc < '0' || *cc > '9')
 				return (printf("Error\n"), 1);
 		sm += atoi(argv[argc]);
