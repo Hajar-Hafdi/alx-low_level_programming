@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * *_realloc - reallocates a memory block using malloc and free
+ * _realloc - reallocates a memory block using malloc and free
  *
  * @ptr: pointer to memo allocated with old_size
  * @old_size: size in bytes of the allocated sppace for ptr
@@ -10,7 +10,7 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *d;
+	void *d = NULL;
 	unsigned int u;
 
 	if (new_size == old_size)
@@ -32,8 +32,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		d = malloc(new_size);
 		if (d == NULL)
 			return (NULL);
-		for (u = 0; u < old_size && i < new_size; u++)
-			*((char *)d +u) = *((char *)ptr + u);
+		for (u = 0; u < old_size && u < new_size; u++)
+			*((char *)d + u) = *((char *)ptr + u);
 		free(ptr);
 	}
 	return (d);
