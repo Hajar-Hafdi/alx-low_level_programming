@@ -15,7 +15,7 @@ void _puts(char *str)
 	while (str[u])
 	{
 		_putchar(str[u]);
-		u++
+		u++;
 	}
 }
 /**
@@ -55,7 +55,7 @@ void print_int(unsigned long int n)
 {
 	unsigned long int divisor = 1, u, ressp;
 
-	for (u = 0; n / divisor > 9; u++; divisor *= 10)
+	for (u = 0; n / divisor > 9; u++, divisor *= 10)
 		;
 	for (; divisor >= 1; n %= divisor, divisor /= 10)
 	{
