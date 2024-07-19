@@ -3,15 +3,15 @@
 /**
  * *malloc_checked - allocates memory using malloc
  *
- * @b: int
+ * @b: usigned int
  *
- * Return: pointer to array initialized or NULL
+ * Return: pointer to allocated memory
  */
 void *malloc_checked(unsigned int b)
 {
-	int *s = malloc(b);
+	void *s = malloc(b);
 
-	if (s == 0)
+	if (s == NULL)
 		exit(98);
 	return (s);
 }
