@@ -9,5 +9,8 @@ void *_calloc(unsigned int nmemb, unsigned int size);
 int *array_range(int min, int max);
 char *_memst(char *s, char b, unsigned int n);
 void simple_print_buffer(char *buffer, unsigned int size);
+int main(void);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+
 
 #endif
