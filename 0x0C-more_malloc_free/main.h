@@ -11,6 +11,11 @@ char *_memst(char *s, char b, unsigned int n);
 void simple_print_buffer(char *buffer, unsigned int size);
 int main(void);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+int main(int argc, char const *argv[]);
+void print_int(unsigned long int n);
+int _atoi(const char *s);
+void _puts(char *str);
+
 
 
 #endif
