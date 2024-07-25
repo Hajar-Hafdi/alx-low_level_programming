@@ -60,7 +60,7 @@ void print_all(const char * const format, ...)
 		{"i", forma_int},
 		{"f", forma_float},
 		{"s", forma_string},
-		{NULL , NULL}
+		{NULL, NULL}
 	};
 	va_start(app, format);
 	while (format && format[u])
