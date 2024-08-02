@@ -9,7 +9,7 @@
  */
 void free_list(list_t *head)
 {
-	list_t *node, nxt_node;
+	list_t *node, *nxt_node;
 
 	if (!head)
 		return;
