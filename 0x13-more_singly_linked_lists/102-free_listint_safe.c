@@ -10,17 +10,26 @@
  */
 listint_t *fd_listint_loop(listint_t *head)
 {
-	listint_t *pointer, *fin;
+	listint_t *slow = head;
+	listint_t *fast = head;
 
 	if (head == NULL)
 		return (NULL);
-	for (fin = head->next; fin != NULL; fin = fin->next)
+	while (fast != NULL && fast->next != NULL)
 	{
-		if (fin == fin->next)
-			return (fin);
-		for (pointer = head; pointer != fin; pointer = pointer->next)
-			if (pointer == fin->next)
-				return (fin->next);
+		slow = slow->next;
+		fast = fast->next->next;
+		if (slow == fast)
+		{
+			listint_t *entry = head;
+
+			while (entry != slow)
+			{
+				entry = entry->next;
+				slow = slow->next;
+			}
+			return (entry);
+		}
 	}
 	return (NULL);
 }
@@ -34,30 +43,31 @@ listint_t *fd_listint_loop(listint_t *head)
 size_t free_listint_safe(listint_t **h)
 {
 	listint_t *nxt, *lpnd;
-	size_t length;
-	int lp = 1;
+	size_t length = 0;
+	int lp_dtc = 0;
 
 	if (h == NULL || *h == NULL)
 		return (0);
 	lpnd = fd_listint_loop(*h);
-	for (length = 0; (*h != lpnd || lp) && *h != NULL; *h = nxt)
+	while (*h != NULL)
 	{
 		length++;
 		nxt = (*h)->next;
-		if (*h == lpnd && lp)
-		{
-			if (lpnd == lpnd->next)
-			{
-				free(*h);
-				break;
-			}
-			length++;
-			nxt = nxt->next;
-			free((*h)->next);
-			lp = 0;
-		}
-		free(*h);
+	if (*h == lpnd && !lp_dtc)
+	{
+	lp_dtc = 1;
+if (lpnd == lpnd->next)
+{
+free(*h);
+break;
+}
+nxt = nxt->next;
+}
+free(*h);
+*h = nxt;
+if (*h == lpnd && lp_dtc)
+	break;
 	}
-	*h = NULL;
-	return (length);
+*h = NULL;
+return (length);
 }
