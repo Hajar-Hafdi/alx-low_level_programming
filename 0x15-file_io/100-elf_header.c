@@ -201,7 +201,8 @@ void output_type(Elf64_Ehdr h)
  */
 void output_entry(Elf64_Ehdr h)
 {
-	int u = 0; int lng = 0;
+	int u = 0;
+	int lng = 0;
 	unsigned char *c = (unsigned char *)&h.e_entry;
 
 	printf(" Entry point adress:                            0x");
