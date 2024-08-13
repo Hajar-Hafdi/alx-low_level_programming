@@ -27,10 +27,10 @@ int main(int arc, char **arv)
 		dprintf(STDERR_FILENO, ERR_NOREAD, arv[1]), exit(98);
 	to_f = open(arv[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
 	if (to_f == -1)
-		dprintf(STDERR_FILENO, ERR_NOWRITE, arv[2]), exit (99);
+		dprintf(STDERR_FILENO, ERR_NOWRITE, arv[2]), exit(99);
 	while ((d = read(frm_f, buffer, READ_BUF_SIZE)) > 0)
 		if (write(to_f, buffer, d) != d)
-			dprintf(STDERR_FILENO, ERR_NOWRITE, arv[2]), exit (99);
+			dprintf(STDERR_FILENO, ERR_NOWRITE, arv[2]), exit(99);
 	if (d == -1)
 		dprintf(STDERR_FILENO, ERR_NOREAD, arv[1]), exit(98);
 	frm_f = close(frm_f);
