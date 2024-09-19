@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * *add_dnodeint - adds a new node at the beginning of a dlistint_t list
+ * add_dnodeint - adds a new node at the beginning of a dlistint_t list
  *
- * @h: add of ptr to curr hd nd
+ * @head: add of ptr to curr hd nd
  * @n: int
  *
  * Return: add of new nd NULL otherwise
