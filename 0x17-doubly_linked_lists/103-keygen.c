@@ -36,7 +36,7 @@ int main(int __attribute__((__unused__)) arc, char *arv[])
 	}
 	srand(tmpp ^ 14);
 	psssword[3] = codx[rand() & 63];
-	tmp = 0;
+	tmpp = 0;
 	for (u = 0; u < ln; u++)
 		tmpp += (arv[1][u] * arv[1][u]);
 	psssword[4] = codx[(tmpp ^ 239) & 63];
