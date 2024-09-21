@@ -32,7 +32,7 @@ int main(int __attribute__((__unused__)) arc, char *arv[])
 	for (u = 0; u < ln; u++)
 	{
 		if (arv[1][u] > tmpp)
-			tmpp = qrv[1][u];
+			tmpp = arv[1][u];
 	}
 	srand(tmpp ^ 14);
 	psssword[3] = codx[rand() & 63];
