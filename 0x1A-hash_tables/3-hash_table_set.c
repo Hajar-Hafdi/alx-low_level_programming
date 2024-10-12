@@ -8,7 +8,7 @@
  *
  * Return: new nd, NULL otherwise
  */
-hash_node_t *make_hsh_nd(const char *key, const char * value)
+hash_node_t *make_hsh_nd(const char *key, const char *value)
 {
 	hash_node_t *nd;
 
