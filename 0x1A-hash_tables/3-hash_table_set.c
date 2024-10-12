@@ -16,14 +16,12 @@ hash_node_t *make_hsh_nd(const char *key, const char *value)
 	if (nd == NULL)
 		return (NULL);
 	nd->key = strdup(key);
-	if (nd == NULL)
-		return (NULL);
-	nd->key = strdup(key);
 	if (nd->key == NULL)
 	{
 		free(nd);
 		return (NULL);
 	}
+
 	nd->value = strdup(value);
 	if (nd->value == NULL)
 	{
@@ -51,11 +49,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	char *nval;
 	unsigned long int indx;
 
-	if (ht == NULL || ht->array == NULL || ht->size == NULL ||
+	if (ht == NULL || ht->array == NULL || ht->size == 0 ||
 			key == NULL || strlen(key) == 0 || value == NULL)
 		return (0);
 	indx = key_index((const unsigned char *)key, ht->size);
 	tp = ht->array[indx];
+
 	while (tp != NULL)
 	{
 		if (strcmp(tp->key, key) == 0)
